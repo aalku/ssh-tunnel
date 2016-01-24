@@ -6,22 +6,23 @@ With this kind of tunnel you can make it "call home" and wait for your connectio
 
 This is what you get:
 
-+----------------+          +-----+   +---------------+          +-------------+
-|                |          |     |   |               |          |             |
-|                >------------------------------------------------>            |
-|        <-----------------------------------------------------------+         |
-|                >------------------------------------------------>  |  SSH    |
-|  Remote site   |          |     |   |               |          |   |  Server |
-|                |          |  F  |   |            +-----------------+         |
-|                |          |  i  |   |            |  |          |             |
-|                |          |  r  |   |  Internet  |  |          +-------------+
-+----------------+          |  e  |   |            |  |
-                            |  w  |   |            |  |
-                            |  a  |   |            |  |          +--------------+
-                            |  l  |   |            |  |          |              |
-                            |  l  |   |            +-----------------< You      |
-                            |     |   |               |          |              |
-                            +-----+   +---------------+          +--------------+
+    +----------------+          +-----+   +---------------+          +-------------+
+    |                |          |     |   |               |          |             |
+    |                >------------------------------------------------>            |
+    |        <-----------------------------------------------------------+         |
+    |                >------------------------------------------------>  |  SSH    |
+    |  Remote site   |          |     |   |               |          |   |  Server |
+    |                |          |  F  |   |            +-----------------+         |
+    |                |          |  i  |   |            |  |          |             |
+    |                |          |  r  |   |  Internet  |  |          +-------------+
+    +----------------+          |  e  |   |            |  |
+                                |  w  |   |            |  |
+                                |  a  |   |            |  |          +--------------+
+                                |  l  |   |            |  |          |              |
+                                |  l  |   |            +-----------------< You      |
+                                |     |   |               |          |              |
+                                +-----+   +---------------+          +--------------+
+
 
 You access a remote site bypassing a firewall with the help of a SSH server.
 You can see the tunnel going out from the remote site to the SSH server and how your connection can get there through it. From the firewall point of view there is just an output SSH connection. Most firewalls will allow it. The firewall can't see there is an incomming connection hidden inside it.
