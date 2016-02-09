@@ -28,7 +28,7 @@ You access a remote site bypassing a firewall with the help of a SSH server.
 You can see the tunnel going out from the remote site to the SSH server and how your connection can get there through it. From the firewall point of view there is just an output SSH connection. Most firewalls will allow it. The firewall can't see there is an incomming connection hidden inside it.
 
 You can create the tunnel with this command:
-  python autossh.py -tp 22 -sh <external-ssh-server> -lp <port-to-listen-on> -su <user> -sq <password> "$@" >> /var/log/autossh.log 2>&1 &
+  python autossh.py -tp 22 -sh &lt;external-ssh-server> -lp &lt;port-to-listen-on> -su &lt;user> -sq &lt;password> "$@" >> /var/log/autossh.log 2>&1 &
 
 This will make autossh.py make an ssh connection to <external-ssh-server> with user <user> and listen there on <port-to-listen-on> tcp port. Any collection there (on the SSH server) to the local <port-to-listen-on> port will be driven through the tunnel to the port 22 (as commanded by the -tp 22 argument) of the system you run autossh on. You can use a different port if you want to "share" another service.
 
